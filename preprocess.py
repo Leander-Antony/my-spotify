@@ -14,7 +14,9 @@ df = pd.read_csv("combined_spotify_history.csv")
 
 
 
-df['play_datetime'] = df.apply(
-    lambda row: pd.to_datetime(row['offline_timestamp'], unit='ms') if row['offline'] else pd.to_datetime(row['ts']),
-    axis=1
-)
+# df['play_datetime'] = df.apply(
+#     lambda row: pd.to_datetime(row['offline_timestamp'], unit='ms') if row['offline'] else pd.to_datetime(row['ts']),
+#     axis=1
+# )
+
+print(len(df['master_metadata_album_artist_name'].unique()))
